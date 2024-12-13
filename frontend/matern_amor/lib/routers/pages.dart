@@ -1,0 +1,9 @@
+export 'package:matern_amor/ui/about_donation/aboutDonation.page.dart';
+export 'package:matern_amor/ui/about_project/view/aboutApp.view.dart';
+export 'package:matern_amor/ui/bottle_donation/bottleDonation.page.dart';
+export 'package:matern_amor/ui/home/home.page.dart';
+export 'package:matern_amor/ui/login/login.page.dart';
+export 'package:matern_amor/ui/onboarding/onboarding.page.dart';
+export 'package:matern_amor/ui/register/register.page.dart';
+export 'package:matern_amor/ui/settings/settings.page.dart';
+export 'package:matern_amor/ui/splash_screen/SplashScreen.page.dart';

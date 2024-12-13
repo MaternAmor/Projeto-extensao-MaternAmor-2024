@@ -1,13 +1,32 @@
+import 'package:device_preview/device_preview.dart';
 import 'package:flutter/material.dart';
-import 'package:matern_amor/pages/SplashScreen.dart';
-import 'package:matern_amor/pages/cadastro.dart';
-import 'package:matern_amor/pages/login.dart';
-import 'package:matern_amor/pages/triagem1.dart';
-import 'package:matern_amor/pages/triagem2.dart';
-import 'package:matern_amor/pages/triagem3.dart';
+import 'package:get/get.dart';
+import 'package:matern_amor/bindings/app_bindings.dart';
+import 'package:matern_amor/routers/routes.dart';
 
 void main() {
-  runApp(MaterialApp(
-    home: SplashScreen(),
-  ));
+  runApp(
+    DevicePreview(
+      enabled: true,
+      builder: (context) => const MyApp(),
+    ),
+  );
+}
+
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return GetMaterialApp(
+      debugShowCheckedModeBanner: false,
+      title: 'MaternAmor',
+      initialRoute: '/splashScreen',
+      getPages: pathsRouters,
+      initialBinding: AppBindings(),
+      useInheritedMediaQuery: true,
+      locale: DevicePreview.locale(context),
+      builder: DevicePreview.appBuilder,
+    );
+  }
 }
